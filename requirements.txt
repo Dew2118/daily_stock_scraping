@@ -51,7 +51,6 @@ PyScreeze==0.1.27
 pyserial==3.4
 pytest==4.6.9
 pytest-cov==2.8.1
-python-apt==0.0.0+ubuntu0.7.8
 python-dateutil==2.8.2
 python3-xlib==0.15
 PyTweening==1.0.3
