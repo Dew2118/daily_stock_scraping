@@ -5,6 +5,7 @@ import os
 from pathlib import Path
 from selenium import webdriver
 
+#change
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
 chrome_options.add_argument("--headless")
