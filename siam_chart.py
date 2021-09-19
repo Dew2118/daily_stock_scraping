@@ -1,12 +1,9 @@
 import pandas as pd
 from html_table_parser import HTMLTableParser
-from urllib.request import urlopen
 from datetime import date
 import os
 from pathlib import Path
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
-from time import sleep
 
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
