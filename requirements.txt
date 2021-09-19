@@ -5,7 +5,6 @@ beautifulsoup4==4.4.1
 blinker==1.4
 certifi==2019.11.28
 chardet==3.0.4
-cloud-init==21.2
 colorama==0.4.4
 configobj==5.0.6
 configparser==5.0.2
@@ -70,3 +69,4 @@ virtualenv==20.0.17
 wcwidth==0.1.8
 webdriver-manager==3.4.2
 zipp==1.0.0
+
