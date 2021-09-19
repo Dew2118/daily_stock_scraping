@@ -8,7 +8,13 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 
-driver = webdriver.Chrome(ChromeDriverManager().install())
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+chrome_options.add_argument("--headless")
+chrome_options.add_argument("--disable-dev-shm-usage")
+chrome_options.add_argument("--no-sandbox")
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+# driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("http://siamchart.com/stock/")
 cwd = f'file:///{Path.cwd()}/Thai Stock Chart List [ข้อมูลหุ้นไทยทั้งหมด พร้อมกราฟหุ้นและเครื่องมือช่วยวิเคราะห์หุ้น และคัดกรองหุ้น] - SiamChart.html'
 COL_LIST = ["Name",
