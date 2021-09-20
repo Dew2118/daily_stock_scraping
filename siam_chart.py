@@ -63,7 +63,7 @@ date = extract_date(htmlSource)
 # df.to_csv(f'{Path.cwd()}\\Siamchart\\{date}_siam_chart.csv', header=False, index=False)
 df.to_csv(f'{date}_siam_chart.csv')
 # s=subprocess.getstatusoutput(f'curl "{date}_siam_chart" file.io')
-s = subprocess.run(f'curl "{date}_siam_chart" file.io', capture_output=True)
+s = subprocess.run(f'curl -F "{date}_siam_chart" file.io', capture_output=True)
 
 os.system('exit')
 print(s.stdout)
