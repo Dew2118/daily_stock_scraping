@@ -16,7 +16,7 @@ dbus-next==0.2.3
 distlib==0.3.0
 distro==1.4.0
 filelock==3.0.12
-html-table-parser-python3==0.2.0
+html_table_parser==0.1.0
 idna==2.8
 importlib-metadata==1.5.0
 Jinja2==2.10.1
