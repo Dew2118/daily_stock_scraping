@@ -4,6 +4,7 @@ from datetime import date
 import os
 from pathlib import Path
 from selenium import webdriver
+import subprocess
 
 #change
 chrome_options = webdriver.ChromeOptions()
@@ -61,6 +62,7 @@ date = extract_date(htmlSource)
 print(df.head())
 # df.to_csv(f'{Path.cwd()}\\Siamchart\\{date}_siam_chart.csv', header=False, index=False)
 df.to_csv(f'{date}_siam_chart.csv')
-os.system(f'curl -F "{date}_siam_chart" file.io')
+s=subprocess.getstatusoutput(f'curl "{date}_siam_chart" file.io')
 os.system('exit')
+print(s)
 driver.quit()
