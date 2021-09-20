@@ -12,8 +12,8 @@ chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 CHROMEDRIVER_PATH = '/app/.chromedriver/bin/chromedriver'
-# driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
-driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
+# driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
 # driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.get("http://siamchart.com/stock/")
 cwd = f'file:///{Path.cwd()}/Thai Stock Chart List [ข้อมูลหุ้นไทยทั้งหมด พร้อมกราฟหุ้นและเครื่องมือช่วยวิเคราะห์หุ้น และคัดกรองหุ้น] - SiamChart.html'
