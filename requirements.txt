@@ -37,7 +37,6 @@ pluggy==0.13.0
 py==1.8.1
 PyAutoGUI==0.9.53
 PyGetWindow==0.0.9
-PyGObject==3.36.0
 PyJWT==1.7.1
 pymacaroons==0.13.0
 PyMsgBox==1.0.9
