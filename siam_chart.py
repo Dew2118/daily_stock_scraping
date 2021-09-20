@@ -45,10 +45,8 @@ COL_LIST = ["Name",
 def extract_date(html):
     start = html.find("<div class=\"column\" style=\"font-weight: bold; color:#FFFF00; background:#008800; width:100%;\">") + len("<div class=\"column\" style=\"font-weight: bold; color:#FFFF00; background:#008800; width:100%;\">")
     end = html.find("</div>", start)
-    print(end)
     txt = html[start:end]
     date = txt[1:11]
-    print(txt)
     return date
 
 htmlSource = driver.page_source
@@ -60,6 +58,7 @@ tt = p.tables[2]
 temp_data = [dict(zip(COL_LIST,list)) for list in tt[1:]]
 df = df.append(temp_data, ignore_index=True)
 date = extract_date(htmlSource)
+print(df.head())
 # df.to_csv(f'{Path.cwd()}\\Siamchart\\{date}_siam_chart.csv', header=False, index=False)
-df.to_csv(fr'C:\\\\Users\\kavin\\Documents\\daily_stock_scraping\\Siamchart\\{date}_siam_chart.csv')
+df.to_csv(f'{date}_siam_chart.csv')
 driver.quit()
